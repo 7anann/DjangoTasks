@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<div class="container">
+  <h2 class="h2 text-center">Add Student using forms</h2>
+<form method="post" style="margin-top:50px">
+  {%csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Add Student" class="btn btn-primary">
+</form>
+  </div>
+{%endblock%}

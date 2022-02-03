@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<div class="container">
+  <h2 class="h2 text-center">Update Student</h2>
+<form method="post" style="margin-top:50px">
+  {%csrf_token %}
+    <label class="lead">Please enter Student id you ant to update</label><br>
+  <input type="text" name="id" placeholder="Student id" required/> <br><br>
+
+    <label class="lead">Please enter updated student name</label><br>
+  <input type="text" name="name" required placeholder="Enter name"/> <br><br>
+
+    <label class="lead">Please enter updated student track</label><br>
+    <input type="text" name="track" required placeholder="Enter track"/> <br><br>
+  <input type="submit" value="Update Student" class="btn btn-primary">
+</form>
+  </div>
+{%endblock%}

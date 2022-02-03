@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<div class="container">
+  <h2 class="h2 text-center">Search Student by name</h2>
+<form method="post" style="margin-top:50px">
+  {%csrf_token %}
+    <label class="lead">Please enter Student name </label><br>
+  <input type="text" name="name" placeholder="Student name" required/> <br><br>
+
+  <input type="submit" value="Search" class="btn btn-primary">
+</form>
+
+    {%for stud in  studs%}
+
+    <div class="row" style="margin-top:50px">
+        <div class="col h5 text-secondary text-center">
+          {{stud.id}}
+        </div>
+
+        <div class="col h5 text-secondary text-center">
+          {{stud.name}}
+        </div>
+
+       <div class="col h5 text-secondary text-center">
+            {{stud.track}}
+        </div>
+</div>
+  {%endfor%}
+
+  </div>
+{%endblock%}

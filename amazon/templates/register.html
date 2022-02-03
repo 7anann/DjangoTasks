@@ -1,0 +1,13 @@
+{%extends 'nav2.html'%}
+{% load static %}
+{%block content%}
+<div class="container">
+  <h2 class="h2 text-center">Registeration Form</h2>
+<form method="post" style="margin-top:50px">
+  {%csrf_token %}
+  <input type="text" name="username" placeholder="Username" required/> <br><br>
+  <input type="password" name="password" required placeholder="Enter Password"/> <br><br>
+  <input type="submit" value="Register" class="btn btn-primary">
+</form>
+  </div>
+{%endblock%}
